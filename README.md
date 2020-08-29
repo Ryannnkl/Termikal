@@ -1,49 +1,35 @@
-## Electron + TypeScript + React
+<h3 align="center">
+  <img src="https://img.icons8.com/cotton/128/000000/movie-beginning--v1.png"/>
+  <br/>
+  <b>Movies At Home</b>
+</h3>
 
-Boilerplate for a project using Electron, React and Typescript
+### O que é?
 
-## Installation
+> Projeto para estudo da ferramenta electron para desenvolvimento de aplicações desktop
 
-Use a package manager of your choice (npm, yarn, etc.) in order to install all dependencies
+> consiste em um organizador de filmes
 
-```bash
-npm install
-```
-
-```bash
-yarn install
-```
-
-## Usage
-
-In order to run this project 2 scripts will need to be executed `dev:react` and `dev:electron`, run each one in a different terminal and always run `dev:react` before `dev:electron`, or `dev` to run them in order automatically
+### como rodar?
 
 ```bash
-npm run dev:react
-```
+git clone https://github.com/Ryannnkl/movie-at-home-electron name-of-your-project
 
-```bash
-npm run dev:electron
-```
+cd name-of-your-project
 
-or
+npm i
 
-```bash
 npm run dev
 ```
 
-## Packaging
-
-To generate a project package run `package`
+- **caso use yarn**
 
 ```bash
-npm run package
+yarn
+
+yarn dev
 ```
 
-## Contributing
+### Boilerplate usado:
 
-Pull requests are always welcome 😃.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+> #### [Boilerplate](https://github.com/diego3g/electron-typescript-react) `electron-typescript-react` do [Diego](https://github.com/diego3g)
