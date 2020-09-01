@@ -22,4 +22,6 @@ const config = new Store({
   watch: true,
 });
 
+console.log(config.path);
+
 export { schema, config };

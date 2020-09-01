@@ -5,6 +5,8 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { defaultTheme } from "./styles/theme";
 
+import Header from "./components/Header";
+
 import Home from "./pages/Home";
 
 const mainElement = document.createElement("div");

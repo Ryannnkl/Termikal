@@ -61,6 +61,7 @@ export const MacActionButton = styled.button<MacActionButtonProps>`
   background: ${(props) => colors[props.color]};
   -webkit-app-region: no-drag;
   border: 0;
+  cursor: pointer;
   width: 12px;
   height: 12px;
   border-radius: 5px;

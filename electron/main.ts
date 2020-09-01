@@ -6,18 +6,22 @@ import installExtension, {
   REDUX_DEVTOOLS,
 } from "electron-devtools-installer";
 
+import { defaultTheme } from "../src/styles/theme";
+
 let mainWindow: Electron.BrowserWindow | null;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1100,
     height: 700,
-    backgroundColor: "#191622",
+    backgroundColor: defaultTheme.backgrounds.dark,
     webPreferences: {
       nodeIntegration: true,
     },
-    frame: true,
-    transparent: false,
+    minWidth: 900,
+    minHeight: 500,
+    frame: false,
+    transparent: true,
   });
 
   if (process.env.NODE_ENV === "development") {

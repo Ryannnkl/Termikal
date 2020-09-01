@@ -1,12 +1,16 @@
 import React from "react";
 
 import { Container, Text } from "./styles";
+import Header from "../../components/Header";
 
 const Home: React.FC = () => {
   return (
-    <Container>
-      <Text>Teste</Text>
-    </Container>
+    <>
+      <Container>
+        <Header />
+        <Text>Teste</Text>
+      </Container>
+    </>
   );
 };
 

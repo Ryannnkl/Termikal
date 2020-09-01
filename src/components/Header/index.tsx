@@ -62,15 +62,15 @@ const Header: React.FC = () => {
       <strong>Filmes</strong>
 
       {shouldUseMacOSWindowActions ? (
-        <WindowActions position="left" shouldShowIconsOnHover>
-          <MacActionButton color="close" onClick={handleCloseWindow}>
-            <FiX />
-          </MacActionButton>
+        <WindowActions position="right" shouldShowIconsOnHover>
           <MacActionButton color="minimize" onClick={handleMinimize}>
             <FiMinus />
           </MacActionButton>
           <MacActionButton color="maximize" onClick={handleMaximize}>
             <FiMaximize2 />
+          </MacActionButton>
+          <MacActionButton color="close" onClick={handleCloseWindow}>
+            <FiX />
           </MacActionButton>
         </WindowActions>
       ) : (

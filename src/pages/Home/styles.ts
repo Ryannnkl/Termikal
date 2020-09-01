@@ -5,9 +5,9 @@ export const Container = styled.div`
   flex: 1;
   flex-direction: column;
   align-items: center;
-  background-color: #333;
+  background-color: ${(props) => props.theme.backgrounds.dark};
 `;
 
 export const Text = styled.h2`
-  color: #f0f0f0;
+  color: ${(props) => props.theme.colors.white};
 `;
