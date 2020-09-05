@@ -18,8 +18,9 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
     },
-    minWidth: 900,
-    minHeight: 500,
+    fullscreen: true,
+    minWidth: 1000,
+    minHeight: 700,
     frame: false,
     transparent: true,
   });
@@ -39,6 +40,7 @@ function createWindow() {
   mainWindow.on("closed", () => {
     mainWindow = null;
   });
+  mainWindow.webContents.openDevTools();
 }
 
 app
