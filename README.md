@@ -4,13 +4,13 @@
   <b>Movies At Home</b>
 </h3>
 
-### O que é?
+### What is?
 
-> Projeto para estudo da ferramenta electron para desenvolvimento de aplicações desktop
+> Project to study the electron tool for desktop application development
 
-> consiste em um organizador de filmes
+> A local film organizer
 
-### como rodar?
+### How to run?
 
 ```bash
 git clone https://github.com/Ryannnkl/movie-at-home-electron name-of-your-project
@@ -22,7 +22,7 @@ npm i
 npm run dev
 ```
 
-- **caso use yarn**
+- ** yarn**
 
 ```bash
 yarn
@@ -30,6 +30,6 @@ yarn
 yarn dev
 ```
 
-### Boilerplate usado:
+### Boilerplate used:
 
-> #### [Boilerplate](https://github.com/diego3g/electron-typescript-react) `electron-typescript-react` do [Diego](https://github.com/diego3g)
+> #### [Boilerplate](https://github.com/diego3g/electron-typescript-react) `electron-typescript-react` - [Diego Fernandes](https://github.com/diego3g)
