@@ -6,7 +6,7 @@
 
 ### What is?
 
-> A terminal using for new users 
+> A terminal for new users 
 
 ### How to run?
 
