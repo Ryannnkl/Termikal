@@ -8,17 +8,18 @@ export const Container = styled.div`
   background-color: ${(props) => props.theme.backgrounds.dark};
 `;
 
-export const HeaderFilms = styled.div`
+export const Section = styled.div`
   display: flex;
-  flex: 1;
+  height: 100%;
+  width: 100%;
   flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
-export const HMovie = styled.div`
-  width: 150px;
-  margin: 30px;
-  border-radius: 8px;
+export const Terminal = styled.div`
+  display: flex;
+  flex: 1;
+  background-color: ${(props) => props.theme.backgrounds.darkest};
 `;
 
 export const Text = styled.h2`

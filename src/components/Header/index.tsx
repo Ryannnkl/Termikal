@@ -59,7 +59,7 @@ const Header: React.FC = () => {
 
   return (
     <Container>
-      <strong>Filmes</strong>
+      <strong>Termikal</strong>
 
       {shouldUseMacOSWindowActions ? (
         <WindowActions position="right" shouldShowIconsOnHover>

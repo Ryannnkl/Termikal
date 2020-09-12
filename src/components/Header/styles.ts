@@ -4,7 +4,7 @@ import { defaultTheme } from "../../styles/theme";
 
 export const Container = styled.header`
   width: 100%;
-  height: 40px;
+  height: 30px;
   position: relative;
   -webkit-user-select: none;
   -webkit-app-region: drag;
