@@ -9,7 +9,7 @@ import Dashboard from "../../components/Dashboard";
 import Terminal from "../../components/Terminal";
 
 const Home: React.FC = () => {
-  const [cmd, setCmd] = useState([Number]);
+  const [cmd, setCmd] = useState([0]);
 
   return (
     <Container>

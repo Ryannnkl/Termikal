@@ -8,7 +8,6 @@ export const defaultTheme = {
     green: "#67e480",
     orange: "#E89E64",
     pink: "#FF79C6",
-    cyan: "#78D1E1",
     red: "#E96379",
     yellow: "#e7de79",
   },

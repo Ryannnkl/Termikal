@@ -12,8 +12,8 @@ let mainWindow: Electron.BrowserWindow | null;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 620,
-    height: 340,
+    width: 750,
+    height: 313,
     backgroundColor: defaultTheme.backgrounds.dark,
     webPreferences: {
       nodeIntegration: true,
@@ -21,6 +21,8 @@ function createWindow() {
     minWidth: 600,
     minHeight: 300,
     frame: false,
+    fullscreenable: false,
+    resizable: false,
     transparent: true,
   });
 
