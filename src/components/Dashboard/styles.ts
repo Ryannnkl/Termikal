@@ -14,10 +14,13 @@ export const Button = styled.div`
   display: flex;
   width: 50px;
   height: 50px;
-  border-radius: 8px;
+  border-radius: 4px;
   margin: 10px 0;
   align-items: center;
   justify-content: center;
   background-color: ${(props) => props.theme.backgrounds.lightest};
   cursor: pointer;
+  &:hover {
+    background-color: ${(props) => props.theme.backgrounds.lighter};
+  }
 `;

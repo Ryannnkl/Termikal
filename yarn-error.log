@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files\Yarn\bin\yarn.js add react-icons
+  C:\Program Files\nodejs\node.exe C:\Program Files\Yarn\bin\yarn.js add exterm-for-react
 
 PATH: 
   C:\Users\Ryann\Downloads\cmder\bin;C:\Users\Ryann\Downloads\cmder\vendor\bin;C:\Users\Ryann\Downloads\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Users\Ryann\Downloads\cmder\vendor\conemu-maximus5;C:\Users\Ryann\Downloads\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Yarn\bin\;C:\Program Files\Java\jdk1.8.0_221\bin;C:\gradle\bin;C:\android-sdk\tools\bin;C:\android-sdk\platform-tools;C:\Users\Ryann\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\Ryann\AppData\Local\Programs\Python\Python37-32\;C:\Users\Ryann\AppData\Roaming\npm;C:\Users\Ryann\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ryann\AppData\Local\Yarn\bin;C:\adb;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\GtkSharp\2.12\bin;C:\Users\Ryann\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\Ryann\AppData\Local\Programs\Python\Python37-32\;C:\Users\Ryann\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ryann\AppData\Local\Yarn\bin;C:\android-sdk\platform-tools;C:\Users\Ryann\AppData\Roaming\npm;C:\Program Files\Nmap;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw32\bin;C:\Program Files\Git\usr\bin;C:\Users\Ryann\Downloads\cmder
@@ -14,14 +14,24 @@ Platform:
   win32 ia32
 
 Trace: 
-  Error: UNKNOWN: unknown error, lstat 'C:\Users\Ryann\AppData\Local\Yarn\Cache\v4\npm-babel-jest-26.1.0-b20751185fc7569a0f135730584044d1cb934328\node_modules\babel-jest\build\loadBabelConfig.d.ts'
+  Error: https://registry.yarnpkg.com/exterm-for-react: Not found
+      at Request.params.callback [as _callback] (C:\Program Files\Yarn\lib\cli.js:65939:18)
+      at Request.self.callback (C:\Program Files\Yarn\lib\cli.js:140464:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (C:\Program Files\Yarn\lib\cli.js:141436:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (C:\Program Files\Yarn\lib\cli.js:141358:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (_stream_readable.js:1221:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
 
 npm manifest: 
   {
-    "name": "electron-films",
+    "name": "electron-terminal",
     "version": "1.0.0",
-    "description": "An Electron boilerplate including TypeScript, React, Jest and ESLint.",
     "main": "./dist/main.js",
+    "description": "Terminal app",
     "scripts": {
       "dev": "npm-run-all -p dev:react electron:serve",
       "dev:electron": "cross-env NODE_ENV=development webpack --config webpack/electron.webpack.js --mode development && npm run start:electron",
@@ -37,7 +47,7 @@ npm manifest:
       "test": "jest"
     },
     "keywords": [],
-    "author": "Diego Fernandes <diego.schell.f@gmail.com>",
+    "author": "Ryann Ferreira",
     "license": "MIT",
     "devDependencies": {
       "@babel/core": "^7.9.0",
@@ -87,14 +97,17 @@ npm manifest:
       "webpack-dev-server": "^3.10.3"
     },
     "dependencies": {
+      "@types/shelljs": "^0.8.8",
       "electron-store": "^6.0.0",
       "json-schema-typed": "^7.0.3",
       "react": "^16.13.1",
       "react-dom": "^16.13.1",
+      "react-icons": "^3.11.0",
+      "shelljs": "^0.8.4",
       "styled-components": "^5.1.1"
     },
     "build": {
-      "appId": "your.id",
+      "appId": "filmes.electron",
       "mac": {
         "category": "public.app-category.video"
       },
@@ -109,13 +122,6 @@ npm manifest:
     "config": {
       "commitizen": {
         "path": "./node_modules/cz-conventional-changelog"
-      }
-    },
-    "husky": {
-      "hooks": {
-        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-        "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-        "pre-commit": "lint-staged"
       }
     },
     "lint-staged": {
@@ -1744,6 +1750,14 @@ Lockfile:
     dependencies:
       "@types/node" "*"
   
+  "@types/glob@*":
+    version "7.1.3"
+    resolved "https://registry.yarnpkg.com/@types/glob/-/glob-7.1.3.tgz#e6ba80f36b7daad2c685acd9266382e68985c183"
+    integrity sha512-SEYeGAIQIQX8NN6LDKprLjbrd5dARM5EXsd8GI/A5l0apYI1fGMWgPHSe4ZKL4eozlAyI+doUE9XbYS4xCkQ1w==
+    dependencies:
+      "@types/minimatch" "*"
+      "@types/node" "*"
+  
   "@types/glob@^7.1.1":
     version "7.1.2"
     resolved "https://registry.yarnpkg.com/@types/glob/-/glob-7.1.2.tgz#06ca26521353a545d94a0adc74f38a59d232c987"
@@ -1871,6 +1885,14 @@ Lockfile:
     dependencies:
       "@types/prop-types" "*"
       csstype "^2.2.0"
+  
+  "@types/shelljs@^0.8.8":
+    version "0.8.8"
+    resolved "https://registry.yarnpkg.com/@types/shelljs/-/shelljs-0.8.8.tgz#e439c69929b88a2c8123c1a55e09eb708315addf"
+    integrity sha512-lD3LWdg6j8r0VRBFahJVaxoW0SIcswxKaFUrmKl33RJVeeoNYQAz4uqCJ5Z6v4oIBOsC5GozX+I5SorIKiTcQA==
+    dependencies:
+      "@types/glob" "*"
+      "@types/node" "*"
   
   "@types/source-list-map@*":
     version "0.1.2"
@@ -5269,7 +5291,7 @@ Lockfile:
       once "^1.3.0"
       path-is-absolute "^1.0.0"
   
-  glob@^7.0.3, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, glob@^7.1.6:
+  glob@^7.0.0, glob@^7.0.3, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, glob@^7.1.6:
     version "7.1.6"
     resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.6.tgz#141f33b81a7c2492e125594307480c46679278a6"
     integrity sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==
@@ -5893,7 +5915,7 @@ Lockfile:
       has "^1.0.3"
       side-channel "^1.0.2"
   
-  interpret@^1.4.0:
+  interpret@^1.0.0, interpret@^1.4.0:
     version "1.4.0"
     resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.4.0.tgz#665ab8bc4da27a774a40584e812e3e0fa45b1a1e"
     integrity sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==
@@ -8492,6 +8514,13 @@ Lockfile:
       prop-types "^15.6.2"
       scheduler "^0.19.1"
   
+  react-icons@^3.11.0:
+    version "3.11.0"
+    resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.11.0.tgz#2ca2903dfab8268ca18ebd8cc2e879921ec3b254"
+    integrity sha512-JRgiI/vdF6uyBgyZhVyYJUZAop95Sy4XDe/jmT3R/bKliFWpO/uZBwvSjWEdxwzec7SYbEPNPck0Kff2tUGM2Q==
+    dependencies:
+      camelcase "^5.0.0"
+  
   react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1:
     version "16.13.1"
     resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -8599,6 +8628,13 @@ Lockfile:
     integrity sha512-0xe001vZBnJEK+uKcj8qOhyAKPzIT+gStxWr3LCB0DwcXR5NZJ3IaC+yGnHCYzB/S7ov3m3EEbZI2zeNvX+hGQ==
     dependencies:
       picomatch "^2.2.1"
+  
+  rechoir@^0.6.2:
+    version "0.6.2"
+    resolved "https://registry.yarnpkg.com/rechoir/-/rechoir-0.6.2.tgz#85204b54dba82d5742e28c96756ef43af50e3384"
+    integrity sha1-hSBLVNuoLVdC4oyWdW70OvUOM4Q=
+    dependencies:
+      resolve "^1.1.6"
   
   redent@^3.0.0:
     version "3.0.0"
@@ -8829,7 +8865,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
     integrity sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
   
-  resolve@^1.10.0, resolve@^1.10.1, resolve@^1.12.0, resolve@^1.13.1, resolve@^1.17.0, resolve@^1.3.2:
+  resolve@^1.1.6, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.12.0, resolve@^1.13.1, resolve@^1.17.0, resolve@^1.3.2:
     version "1.17.0"
     resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.17.0.tgz#b25941b54968231cc2d1bb76a79cb7f2c0bf8444"
     integrity sha512-ic+7JYiV8Vi2yzQGFWOkiZD5Z9z7O2Zhm9XMaTxdJExKasieFCr+yXZ/WmXsckHiKl12ar0y6XiXDx3m4RHn1w==
@@ -9202,6 +9238,15 @@ Lockfile:
     version "1.7.2"
     resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.2.tgz#67a7d02c76c9da24f99d20808fcaded0e0e04be2"
     integrity sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
+  
+  shelljs@^0.8.4:
+    version "0.8.4"
+    resolved "https://registry.yarnpkg.com/shelljs/-/shelljs-0.8.4.tgz#de7684feeb767f8716b326078a8a00875890e3c2"
+    integrity sha512-7gk3UZ9kOfPLIAbslLzyWeGiEqx9e3rxwZM0KE6EL8GlGwjym9Mrlx5/p33bWTu9YG6vcS4MBxYZDHYr5lr8BQ==
+    dependencies:
+      glob "^7.0.0"
+      interpret "^1.0.0"
+      rechoir "^0.6.2"
   
   shellwords@^0.1.1:
     version "0.1.1"

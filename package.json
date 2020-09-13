@@ -2,6 +2,7 @@
   "name": "electron-terminal",
   "version": "1.0.0",
   "main": "./dist/main.js",
+  "description": "Terminal app",
   "scripts": {
     "dev": "npm-run-all -p dev:react electron:serve",
     "dev:electron": "cross-env NODE_ENV=development webpack --config webpack/electron.webpack.js --mode development && npm run start:electron",
@@ -17,7 +18,7 @@
     "test": "jest"
   },
   "keywords": [],
-  "author": "Diego Fernandes <diego.schell.f@gmail.com>",
+  "author": "Ryann Ferreira",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -67,13 +68,15 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "@types/shelljs": "^0.8.8",
     "electron-store": "^6.0.0",
     "json-schema-typed": "^7.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.11.0",
     "shelljs": "^0.8.4",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "xterm-for-react": "^1.0.4"
   },
   "build": {
     "appId": "filmes.electron",

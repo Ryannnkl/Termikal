@@ -16,7 +16,7 @@ export const Section = styled.div`
   justify-content: space-between;
 `;
 
-export const Terminal = styled.div`
+export const Terminals = styled.div`
   display: flex;
   flex: 1;
   background-color: ${(props) => props.theme.backgrounds.darkest};
