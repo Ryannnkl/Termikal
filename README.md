@@ -1,26 +1,25 @@
 <h3 align="center">
-  <img src="https://img.icons8.com/officel/120/000000/console.png"/>
+  <img src="https://i.ibb.co/Jp5XrS2/background.png"/>
   <br/>
-  <b>Termikal</b>
 </h3>
 
-### What is?
+## What is?
 
-> A terminal for new users 
+> ### A terminal with unix features, for a better experience
+>
+> #### :construction: This project is not yet completed, but feel free to make your contribution
 
-### How to run?
+## How to run?
+
+- **npm**
 
 ```bash
-git clone https://github.com/Ryannnkl/Termikal name-of-your-project
-
-cd name-of-your-project
-
 npm i
 
 npm run dev
 ```
 
-- ** yarn**
+- **yarn**
 
 ```bash
 yarn
@@ -28,6 +27,15 @@ yarn
 yarn dev
 ```
 
-### Boilerplate used:
+## used:
 
-> #### [Boilerplate](https://github.com/diego3g/electron-typescript-react) `electron-typescript-react` - [Diego Fernandes](https://github.com/diego3g)
+- [Electron](https://www.electronjs.org/)
+- #### [Boilerplate](https://github.com/diego3g/electron-typescript-react) `electron-typescript-react` - [Diego Fernandes](https://github.com/diego3g)
+- [shelljs](https://github.com/shelljs/shelljs)
+- [xterm](https://xtermjs.org/)
+
+### by
+
+| [<img src="https://avatars1.githubusercontent.com/u/48577990?v=4" width=115><br><sub>@Ryannnkl</sub>](https://github.com/Ryannnkl) |
+| :--------------------------------------------------------------------------------------------------------------------------------: |
+
