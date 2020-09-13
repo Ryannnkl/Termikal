@@ -1,19 +1,17 @@
 <h3 align="center">
-  <img src="https://img.icons8.com/cotton/128/000000/movie-beginning--v1.png"/>
+  <img src="https://img.icons8.com/officel/120/000000/console.png"/>
   <br/>
-  <b>Movies At Home</b>
+  <b>Termikal</b>
 </h3>
 
 ### What is?
 
-> Project to study the electron tool for desktop application development
-
-> A local film organizer
+> A terminal for new users 
 
 ### How to run?
 
 ```bash
-git clone https://github.com/Ryannnkl/movie-at-home-electron name-of-your-project
+git clone https://github.com/Ryannnkl/Termikal name-of-your-project
 
 cd name-of-your-project
 
