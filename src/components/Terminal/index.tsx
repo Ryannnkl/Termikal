@@ -1,6 +1,5 @@
 import React, { useState, useEffect, createRef } from "react";
 import { XTerm, XTermProps } from "xterm-for-react";
-import path from "path";
 import shelljs from "shelljs";
 
 import useCommand from "../../hooks/useCommand";
@@ -13,8 +12,12 @@ const Terminal: React.FC = () => {
 
   useEffect(() => {
     xtermRef.current.terminal.writeln("Ola :)");
-    xtermRef.current.terminal.write(`c: >`);
+    xtermRef.current.terminal.write(`${getPwd()} >`);
   }, []);
+
+  function getPwd() {
+    return "Ryann@Win:-$";
+  }
 
   return (
     <Container>
@@ -35,10 +38,18 @@ const Terminal: React.FC = () => {
           const code = data.charCodeAt(0);
 
           if (code === 13 && input.length > 0) {
-            const response = shelljs.ls();
             console.log(data);
-            xtermRef.current.terminal.writeln(`\n\r${response.toString()}`);
-            xtermRef.current.terminal.write(`C: >`);
+            if (input === "clear" || input === "cls") {
+              xtermRef.current.terminal.writeln("");
+              xtermRef.current.terminal.clear();
+              xtermRef.current.terminal.write(`${getPwd()} >`);
+              setInput("");
+            } else {
+              const response = useCommand(input);
+              xtermRef.current.terminal.writeln(`\n\r${response}`);
+            }
+
+            xtermRef.current.terminal.write(`${getPwd()} >`);
 
             setInput("");
           } else if (code === 127 && input.length > 0) {
@@ -52,7 +63,6 @@ const Terminal: React.FC = () => {
             setInput(input + data);
           }
         }}
-        style={{ backgroundColor: "#333" }}
       />
     </Container>
   );
