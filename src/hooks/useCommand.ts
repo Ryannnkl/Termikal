@@ -1,9 +1,10 @@
 import shelljs from "shelljs";
 import child_process from "child_process";
-import util from "util";
+import { homedir } from "os";
+
 const exec = require("child_process").exec;
 
-function useCommand(cmd: string) {
+export function useCommand(cmd: string) {
   shelljs.config.execPath = process.env.HOME;
   const command = cmd.split(" ")[0];
   const params = cmd.split(" ");
@@ -32,4 +33,6 @@ function useCommand(cmd: string) {
     return shelljs.echo("ainda em testes").toString();
   }
 }
-export default useCommand;
+export function getHomeDir() {
+  return homedir();
+}

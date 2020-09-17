@@ -7,6 +7,7 @@ import { Container, Section, Terminals } from "./styles";
 import Header from "../../components/Header";
 import Dashboard from "../../components/Dashboard";
 import Terminal from "../../components/Terminal";
+import TabsTerinals from "../../components/TabsTerminals";
 
 const Home: React.FC = () => {
   const [cmd, setCmd] = useState([0]);
@@ -16,9 +17,7 @@ const Home: React.FC = () => {
       <Header />
       <Section>
         <Dashboard />
-        <Terminals>
-          <Terminal />
-        </Terminals>
+        <TabsTerinals />
       </Section>
     </Container>
   );

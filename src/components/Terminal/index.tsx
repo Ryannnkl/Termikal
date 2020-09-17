@@ -2,7 +2,7 @@ import React, { useState, useEffect, createRef } from "react";
 import { XTerm, XTermProps } from "xterm-for-react";
 import shelljs from "shelljs";
 
-import useCommand from "../../hooks/useCommand";
+import { useCommand, getHomeDir } from "../../hooks/useCommand";
 import { Container } from "./styles";
 
 const Terminal: React.FC = () => {
@@ -12,12 +12,8 @@ const Terminal: React.FC = () => {
 
   useEffect(() => {
     xtermRef.current.terminal.writeln("Ola :)");
-    xtermRef.current.terminal.write(`${getPwd()} >`);
+    xtermRef.current.terminal.write(`${getHomeDir()} >`);
   }, []);
-
-  function getPwd() {
-    return "Ryann@Win:-$";
-  }
 
   return (
     <Container>
@@ -42,14 +38,14 @@ const Terminal: React.FC = () => {
             if (input === "clear" || input === "cls") {
               xtermRef.current.terminal.writeln("");
               xtermRef.current.terminal.clear();
-              xtermRef.current.terminal.write(`${getPwd()} >`);
+              xtermRef.current.terminal.write(`${getHomeDir()} >`);
               setInput("");
             } else {
               const response = useCommand(input);
               xtermRef.current.terminal.writeln(`\n\r${response}`);
             }
 
-            xtermRef.current.terminal.write(`${getPwd()} >`);
+            xtermRef.current.terminal.write(`${getHomeDir()} >`);
 
             setInput("");
           } else if (code === 127 && input.length > 0) {
