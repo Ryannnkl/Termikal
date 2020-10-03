@@ -19,8 +19,8 @@ const Terminal: React.FC = () => {
     <Container>
       <XTerm
         options={{
-          cols: 75,
-          rows: 22,
+          cols: 72,
+          rows: 21,
           theme: {
             background: "#15121E",
             red: "#E96379",

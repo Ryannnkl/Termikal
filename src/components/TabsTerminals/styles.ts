@@ -11,10 +11,14 @@ export const TabListContent = styled(TabList)`
 
 export const TabTitle = styled(Tab)`
   display: flex;
-  flex: 1;
   align-items: center;
   justify-content: center;
+  background-color: ${(props) => props.theme.backgrounds.dark};
+  border: 1px solid ${(props) => props.theme.backgrounds.darkest};
   cursor: pointer;
+  &::after {
+    transform: skewX(25deg);
+  }
 `;
 
 export const TabContent = styled(TabPanel)``;

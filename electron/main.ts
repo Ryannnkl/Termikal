@@ -22,7 +22,7 @@ function createWindow() {
     minHeight: 300,
     frame: false,
     fullscreenable: false,
-    resizable: false,
+    resizable: true,
     transparent: true,
   });
 
