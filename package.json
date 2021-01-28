@@ -42,7 +42,7 @@
     "commitizen": "^4.2.1",
     "cross-env": "^7.0.2",
     "cz-conventional-changelog": "3.2.0",
-    "electron": "^8.5.2",
+    "electron": "^9.4.0",
     "electron-builder": "^22.7.0",
     "electron-devtools-installer": "^3.1.0",
     "eslint": "^7.3.1",
